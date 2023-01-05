@@ -1,0 +1,17 @@
+<html>
+    <h1>Redirecting...</h1>
+</html>
+
+<script>
+    const urID = (new URLSearchParams(window.location.search)).get('id');
+fetch('http://dragonblox.ddns.net:455/url/' + urID, {
+    method: 'GET',
+    headers: {
+        'Accept': 'plain/text',
+    },
+})
+.then(response => response.text())
+.then(text => {window.location.replace(text + "#redirectedbyserverorganiser")})
+
+
+</script>
